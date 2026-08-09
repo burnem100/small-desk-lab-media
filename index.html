@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A free four-measurement desk-fit checklist from Small Desk Lab. Values stay in your browser.">
+  <meta name="theme-color" content="#f1efe7">
+  <meta property="og:title" content="Desk-Fit Checklist — Small Desk Lab">
+  <meta property="og:description" content="Measure the desk before opening the product page.">
+  <meta property="og:type" content="website">
+  <title>Desk-Fit Checklist — Small Desk Lab</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script src="app.js?v=2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#checklist">Skip to the checklist</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Small Desk Lab home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>SMALL DESK LAB</span>
+    </a>
+    <div class="header-actions">
+      <span class="evidence-label">CATEGORY GUIDE</span>
+      <a href="https://www.instagram.com/smalldesklab/" rel="me">@smalldesklab ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="series">WILL IT FIT? / FREE CHECKLIST</p>
+        <h1 id="page-title">Measure the desk.<br><em>Then</em> shop.</h1>
+        <p class="lede">Four numbers expose many physical conflicts before a clamp, stand, or riser reaches your workspace.</p>
+        <a class="primary-action" href="#checklist">Record your measurements <span aria-hidden="true">↓</span></a>
+        <p class="local-note"><span aria-hidden="true">●</span> No signup. No analytics. Values stay on this device.</p>
+      </div>
+
+      <figure class="desk-figure">
+        <svg viewBox="0 0 620 700" role="img" aria-labelledby="desk-title desk-desc">
+          <title id="desk-title">Top-down desk measurement diagram</title>
+          <desc id="desk-desc">A rectangular desk showing width, usable depth, desktop thickness at the rear edge, and wall clearance.</desc>
+          <defs>
+            <pattern id="minor-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="1"/>
+            </pattern>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0 0L10 5L0 10Z" fill="#3867e8"/>
+            </marker>
+          </defs>
+          <rect class="grid" x="0" y="0" width="620" height="700" fill="url(#minor-grid)"/>
+          <rect class="wall" x="80" y="58" width="460" height="42"/>
+          <text x="310" y="87" text-anchor="middle" class="svg-label">WALL / FIXED OBSTRUCTION</text>
+          <rect class="clearance" x="112" y="122" width="396" height="54"/>
+          <rect class="desk" x="112" y="190" width="396" height="390"/>
+          <rect class="occupied" x="112" y="190" width="396" height="108"/>
+          <rect class="monitor" x="228" y="210" width="164" height="52" rx="8"/>
+          <rect class="monitor-neck" x="302" y="262" width="16" height="34"/>
+          <line class="measure" x1="112" y1="628" x2="508" y2="628" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="310" y="663" text-anchor="middle" class="svg-measure">01 / FULL DESK WIDTH</text>
+          <line class="measure" x1="556" y1="298" x2="556" y2="580" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="578" y="440" text-anchor="middle" class="svg-measure rotate">02 / USABLE DEPTH</text>
+          <line class="measure coral" x1="82" y1="176" x2="82" y2="190" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="24" y="184" class="svg-constraint">03 / EDGE</text>
+          <line class="measure" x1="534" y1="100" x2="534" y2="176" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <text x="548" y="141" class="svg-small">04 / GAP</text>
+          <text x="310" y="349" text-anchor="middle" class="zone-title">USABLE WORK ZONE</text>
+          <text x="310" y="382" text-anchor="middle" class="zone-note">measure what remains after fixed footprints</text>
+        </svg>
+        <figcaption>Illustrative geometry—not an exact product or compatibility result.</figcaption>
+      </figure>
+    </section>
+
+    <section class="checklist-section" id="checklist" aria-labelledby="checklist-title">
+      <div class="section-intro">
+        <p class="series">YOUR DESK / FOUR NUMBERS</p>
+        <h2 id="checklist-title">Desk-fit card</h2>
+        <p>Use the unit you trust. Add the other only when a product page uses it.</p>
+      </div>
+
+      <form class="measurement-card" novalidate>
+        <div class="card-heading">
+          <p>SMALL DESK LAB / WILL IT FIT?</p>
+          <span id="form-status" role="status" aria-live="polite">Ready to measure</span>
+        </div>
+
+        <div class="field-grid">
+          <fieldset data-measurement="width">
+            <legend><span>01</span> Full desk width</legend>
+            <p>Left edge to right edge.</p>
+            <div class="unit-pair">
+              <label>Centimetres <input name="width-cm" type="number" inputmode="decimal" min="0" step="0.1" placeholder="100"><span>cm</span></label>
+              <label>Inches <input name="width-in" type="number" inputmode="decimal" min="0" step="0.1" placeholder="39.4"><span>in</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-measurement="depth">
+            <legend><span>02</span> Usable depth</legend>
+            <p>Front edge to the first fixed obstruction.</p>
+            <div class="unit-pair">
+              <label>Centimetres <input name="depth-cm" type="number" inputmode="decimal" min="0" step="0.1" placeholder="60"><span>cm</span></label>
+              <label>Inches <input name="depth-in" type="number" inputmode="decimal" min="0" step="0.1" placeholder="23.6"><span>in</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-measurement="thickness">
+            <legend><span>03</span> Desktop thickness</legend>
+            <p>Measure the mounting edge, including bevels.</p>
+            <div class="unit-pair">
+              <label>Centimetres <input name="thickness-cm" type="number" inputmode="decimal" min="0" step="0.1" placeholder="2.5"><span>cm</span></label>
+              <label>Inches <input name="thickness-in" type="number" inputmode="decimal" min="0" step="0.1" placeholder="1.0"><span>in</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset data-measurement="clearance">
+            <legend><span>04</span> Rear-edge clearance</legend>
+            <p>Desk edge to wall, apron, or other obstruction.</p>
+            <div class="unit-pair">
+              <label>Centimetres <input name="clearance-cm" type="number" inputmode="decimal" min="0" step="0.1" placeholder="8"><span>cm</span></label>
+              <label>Inches <input name="clearance-in" type="number" inputmode="decimal" min="0" step="0.1" placeholder="3.1"><span>in</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="card-actions">
+          <button class="primary-button" type="button" id="print-card">Print / save checklist <span aria-hidden="true">↗</span></button>
+          <button class="text-button" type="reset">Clear this device</button>
+        </div>
+        <p class="privacy-note">Nothing is submitted. Your browser may remember entered values until you clear them.</p>
+      </form>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <div class="method-heading">
+        <p class="series">METHOD / NOT A GUARANTEE</p>
+        <h2 id="method-title">Measure the constraint, not the label.</h2>
+      </div>
+      <ol class="method-list">
+        <li><span>01</span><div><h3>Use the real desk edge.</h3><p>A listed desk size can omit trim, wall gaps, or the space occupied by a monitor foot.</p></div></li>
+        <li><span>02</span><div><h3>Record mounting obstructions.</h3><p>Rear aprons, bevels, cable trays, walls, and fixed hardware can matter as much as thickness.</p></div></li>
+        <li><span>03</span><div><h3>Open the exact manual.</h3><p>Compare your card with the current dimensions and compatibility notes for the exact model and variant.</p></div></li>
+        <li><span>04</span><div><h3>Treat the answer as conditional.</h3><p>The card narrows a physical-fit question. It does not guarantee installation, comfort, stability, or performance.</p></div></li>
+      </ol>
+    </section>
+
+    <aside class="evidence" aria-labelledby="evidence-title">
+      <div>
+        <p class="series">SOURCE NOTE / CHECKED 2026-08-08</p>
+        <h2 id="evidence-title">Background, not borrowed certainty.</h2>
+      </div>
+      <div class="evidence-copy">
+        <p>The four-field checklist is an original Small Desk Lab planning method. OSHA and CCOHS support considering workspace depth, equipment, movement, and clear space. They do not say these four measurements guarantee a product will fit.</p>
+        <ul>
+          <li><a href="https://www.osha.gov/etools/computer-workstations/components/desks">OSHA — Computer Workstations: Desks ↗</a></li>
+          <li><a href="https://www.ccohs.ca/oshanswers/ergonomics/office/working_space.html">CCOHS — Space Requirements for Office Work ↗</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <p class="series">KEEP THE CARD / CHECK THE MANUAL</p>
+      <h2 id="final-title">Your next product page should answer to your measurements.</h2>
+      <div class="final-actions">
+        <a class="primary-action" href="#checklist">Return to the checklist <span aria-hidden="true">↑</span></a>
+        <a href="https://www.instagram.com/smalldesklab/">See the visual guides on Instagram ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Small Desk Lab. Product-neutral research and original diagrams.</p>
+    <p>No affiliate links on this page.</p>
+  </footer>
+</body>
+</html>
